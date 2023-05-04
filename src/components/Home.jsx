@@ -192,7 +192,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
+                src="https://ik.imagekit.io/omobaoshoffa/car_rental/crv-honda?updatedAt=1683202338308"
                 alt="green iguana"
               />
               <CardContent>
@@ -217,7 +217,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
+                src="https://ik.imagekit.io/omobaoshoffa/car_rental/2024_Toyota_GrandHighlander_StormCloud_001-scaled.jpg?updatedAt=1683202340296"
                 alt="green iguana"
               />
               <CardContent>
@@ -242,7 +242,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
+                src="https://ik.imagekit.io/omobaoshoffa/car_rental/bmw-218?updatedAt=1683202334972"
                 alt="green iguana"
               />
               <CardContent>
