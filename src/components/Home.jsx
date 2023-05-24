@@ -59,7 +59,7 @@ const Home = () => {
                 marginTop: "1.5em",
               }}
             >
-              Buy now
+              Buy
             </ColorButton>
             <ColorLoginButton
               variant="contained"
@@ -71,7 +71,7 @@ const Home = () => {
                 marginTop: "1.5em",
               }}
             >
-              Login
+              Ride to
             </ColorLoginButton>
           </Stack>
         </Box>
@@ -150,7 +150,7 @@ const Home = () => {
             }}
           >
             <img
-              src="https://ik.imagekit.io/omobaoshoffa/car_rental/11327_c521be31d0a84796b434d723905cda0e-4_25_2023__10_44_28_PM.jpg?updatedAt=1682557513980"
+              src="https://ik.imagekit.io/omobaoshoffa/car_rental/2017-toyota-camry-le-automatic.jpg?updatedAt=1683230858975"
               alt="amg-interior-design"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
@@ -304,7 +304,7 @@ const Home = () => {
           }}
         >
           <img
-            src="https://ik.imagekit.io/omobaoshoffa/car_rental/11327_c521be31d0a84796b434d723905cda0e-4_25_2023__10_44_28_PM.jpg?updatedAt=1682557513980"
+            src="https://ik.imagekit.io/omobaoshoffa/car_rental/BMW-x2-offer-page-desktop.jpg?updatedAt=1683231816215"
             alt="amg-interior-design"
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
