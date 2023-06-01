@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  FormControl,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 const Contact = () => {
   return (
@@ -20,12 +13,15 @@ const Contact = () => {
       }}
       sx={{ display: "flex", alignItems: "center" }}
     >
-      <Typography variant="h3">Get in Touch</Typography>
-      <Typography variant="p">
-        We're here for you, and we're wearing our thinking caps. But first swing
-        by our fantastic Help Center for all your InVision product and technical
-        needs! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
-        inventore sit veritatis.
+      <Typography variant="h3" sx={{ marginBottom: "2rem" }}>
+        Get in Touch
+      </Typography>
+      <Typography variant="p" sx={{ marginBottom: "1rem" }}>
+        We're here to assist you. Whether you have a question, feedback, or need
+        support, our dedicated team is ready to help. Reach out to us through
+        the contact form or utilize the provided contact information. We value
+        your input and strive to provide prompt and personalized assistance.
+        Don't hesitate to get in touch - we look forward to hearing from you!
       </Typography>
       <Box
         sx={{
@@ -33,24 +29,61 @@ const Contact = () => {
           maxWidth: "100%",
         }}
       >
-        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-          <TextField label="First name" variant="filled" />
-        </FormControl>
-        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-          <TextField label="Last name" variant="outlined" />
-        </FormControl>
-        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-          <TextField label="Email Address" variant="outlined" />
-        </FormControl>
-        <FormControl fullWidth sx={{ m: 1 }}>
-          <TextField
-            placeholder="Leave your message here"
-            rows={4}
-            label="Message"
-            multiline
-          />
-        </FormControl>
-        <Button fullWidth sx={{ m: 1 }} variant="filled">
+        <TextField
+          id="input-with-icon-textfield"
+          label="Full name"
+          fullWidth
+          placeholder="Full name"
+          variant="standard"
+          sx={{
+            marginY: "1rem",
+            "& .MuiInputLabel-root": {
+              color: "#fff",
+            },
+            "& .MuiInput-underline:before": {
+              borderBottomColor: "#fff",
+            },
+          }}
+        />
+        <TextField
+          id="input-with-icon-textfield"
+          label="Email address"
+          fullWidth
+          placeholder="Email address"
+          variant="standard"
+          sx={{
+            marginY: "1rem",
+            "& .MuiInputLabel-root": {
+              color: "#fff",
+            },
+            "& .MuiInput-underline:before": {
+              borderBottomColor: "#fff",
+            },
+          }}
+        />
+        <TextField
+          id="input-with-icon-textfield"
+          label="Message"
+          multiline
+          fullWidth
+          rows={4}
+          placeholder="Write down your message"
+          variant="standard"
+          sx={{
+            marginY: "1rem",
+            "& .MuiInputLabel-root": {
+              color: "#fff",
+            },
+            "& .MuiInput-underline:before": {
+              borderBottomColor: "#fff",
+            },
+          }}
+        />
+        <Button
+          fullWidth
+          variant="filled"
+          sx={{ backgroundColor: "primary.main", m: "1" }}
+        >
           Submit
         </Button>
       </Box>

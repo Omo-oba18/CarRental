@@ -35,11 +35,23 @@ const Navbar = (props) => {
     { item: "Login", links: "/login" },
   ];
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2, color: "white" }}>
-        Car Vendor
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", paddingTop: "2rem" }}
+    >
+      <Typography
+        component={Link}
+        to="/"
+        variant="h6"
+        sx={{
+          color: "white",
+          cursor: "pointer",
+          textDecoration: "none",
+        }}
+      >
+        RideB
       </Typography>
-      <Divider />
+      <Divider sx={{ backgroundColor: "#fff", marginTop: ".4rem" }} />
       <List>
         {navItems.map(({ item, links }, index) => (
           <ListItem component={Link} to={links} key={index} disablePadding>
@@ -74,10 +86,16 @@ const Navbar = (props) => {
           </IconButton>
           <Typography
             variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            component={Link}
+            to="/"
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              cursor: "pointer",
+              textDecoration: "none",
+            }}
           >
-            Car Vendor
+            RideB
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map(({ item, links }, index) => (

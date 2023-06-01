@@ -1,31 +1,23 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
+import { Link } from "react-router-dom";
+import CategoryCard from "./CategoryCard";
 
 const ColorButton = styled(Button)(() => ({
-  color: "#004aad",
+  color: "#7F669D",
   backgroundColor: "#fff",
   "&:hover": {
     color: "#fff",
-    backgroundColor: "#004aad",
+    backgroundColor: "#7F669D",
   },
 }));
 const ColorLoginButton = styled(Button)(() => ({
   color: "#fff",
-  backgroundColor: "#004aad",
+  backgroundColor: "#7f669d",
   "&:hover": {
     backgroundColor: "#fff",
-    color: "#004aad",
+    color: "#7f669d",
   },
 }));
 
@@ -70,6 +62,8 @@ const Home = () => {
                 marginLeft: "1em",
                 marginTop: "1.5em",
               }}
+              component={Link}
+              to="/ride-to"
             >
               Ride to
             </ColorLoginButton>
@@ -98,7 +92,6 @@ const Home = () => {
           height: { xs: "80vh", md: "70vh" },
         }}
         style={{
-          // marginTop: "6rem",
           paddingLeft: "3.5rem",
           paddingRight: "3.5rem",
         }}
@@ -121,7 +114,7 @@ const Home = () => {
           >
             <Typography
               variant={isSmallScreen ? "h4" : "h2"}
-              color="#38b6ff"
+              color="#7f669d"
               textAlign="center"
             >
               Up to 300,000 XOF discount on a Camy LE 2017
@@ -134,25 +127,27 @@ const Home = () => {
         <Box
           sx={{
             width: "100%",
-            backgroundColor: "blue",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            backgroundColor: "#7F669D",
             height: "100%",
-            paddingX: "6em",
-            paddingY: "2em",
+            padding: "2em",
           }}
         >
           <Box
             sx={{
               borderRadius: "0 25% 0 0",
               overflow: "hidden",
+              height: "100%",
             }}
           >
             <img
               src="https://ik.imagekit.io/omobaoshoffa/car_rental/2017-toyota-camry-le-automatic.jpg?updatedAt=1683230858975"
               alt="amg-interior-design"
-              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             />
           </Box>
         </Box>
@@ -171,92 +166,7 @@ const Home = () => {
             Shop by Category
           </Typography>
         </Box>
-        <Stack
-          direction={{ xs: "column", sm: "row" }}
-          spacing={4}
-          sx={{
-            justifyContent: "sapce-between",
-            display: "flex",
-            marginTop: "2rem",
-            marginBottom: "2rem",
-          }}
-        >
-          <Card
-            sx={{
-              width: "100%",
-              borderRadius: "0 80px 0 80px",
-              height: "350px",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                src="https://ik.imagekit.io/omobaoshoffa/car_rental/crv-honda?updatedAt=1683202338308"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          <Card
-            sx={{
-              width: "100%",
-              borderRadius: "0 80px 0 80px",
-              height: "350px",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                src="https://ik.imagekit.io/omobaoshoffa/car_rental/2024_Toyota_GrandHighlander_StormCloud_001-scaled.jpg?updatedAt=1683202340296"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          <Card
-            sx={{
-              width: "100%",
-              borderRadius: "0 80px 0 80px",
-              height: "350px",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                src="https://ik.imagekit.io/omobaoshoffa/car_rental/bmw-218?updatedAt=1683202334972"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Stack>
+        <CategoryCard />
         <Stack
           sx={{
             display: "flex",
@@ -264,7 +174,12 @@ const Home = () => {
             justifyItems: "center",
           }}
         >
-          <Button marginY={2} variant="contained" sx={{ borderRadius: "16px" }}>
+          <Button
+            variant="contained"
+            sx={{ borderRadius: "16px", marginY: "2rem" }}
+            component={Link}
+            to="/view-more-car"
+          >
             View more
           </Button>
         </Stack>

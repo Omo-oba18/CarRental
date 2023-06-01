@@ -1,19 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
 import App from "./App";
 import "./main.css";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-// const darkTheme = createTheme({
-//   palette: {
-//     mode: "#de433e",
-//   },
-// });
-ReactDOM.render(
-  // <ThemeProvider theme={darkTheme}>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  // </ThemeProvider>
-  document.getElementById("root")
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { themeOptions } from "./utils/Theme";
+const theme = createTheme(themeOptions);
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ThemeProvider>
 );

@@ -6,8 +6,8 @@
 }
 html,
 body {
-  background: rgb(5, 22, 96);
-  background: linear-gradient(90deg, rgba(61, 214, 221, 1), rgba(5, 22, 96, 1));
+  background: #7f669d;
+  background: linear-gradient(90deg, rgb(178, 103, 248), rgb(47, 5, 96));
   overflow-x: hidden;
   min-height: 100%;
 }
